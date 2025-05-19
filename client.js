@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     connectionStatus.textContent = 'Disconnected';
   });
 
-  // Listeners for events from the server
+  // These synchronize board states
   socket.on('boardState', (state) => {
     currentBoardState = state;
     redrawCanvas(state);
